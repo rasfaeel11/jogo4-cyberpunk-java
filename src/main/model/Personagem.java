@@ -2,7 +2,7 @@ package main.model;
 
 public abstract class Personagem {
     protected String nome;
-    protected int hp;
+    protected double hp;
     protected int ep;
     protected int forca;
     protected int inteligencia;
@@ -36,7 +36,7 @@ public abstract class Personagem {
         return hp > 0;
     }
     
-    public int curar(int valor){
+    public double curar(int valor){
         if(this.stims > 0){
             this.stims -= 1;
             this.hp += valor;
@@ -52,7 +52,7 @@ public abstract class Personagem {
     }   
 
     public String getNome() { return nome; }
-    public int getHp() { return hp; }
+    public double getHp() { return hp; }
     public int getEp() { return ep; }
     public int getStims() { return stims; }
     public int getForca() {return forca;}
@@ -60,5 +60,13 @@ public abstract class Personagem {
     public int getInteligencia(){return inteligencia; }
     public int getDefesaCibernetica(){return defesaCibernetica; }
     public int getDanoBase(){return danoBase; }
+
+     public void setDanoBase(int danoBase) {
+        this.danoBase = danoBase;
+    }
+
+     public void setHp(double hp) {
+        this.hp = hp;
+    }
 
 }

@@ -6,7 +6,7 @@ import main.model.Personagem;
 public class CombatService {
     Random random = new Random();
 
-    private static final int EP_GASTO = 5;
+    private static final int EP_GASTO = 10;
     private static final int VALOR_CURA_STIM = 20;
 
 
