@@ -9,6 +9,7 @@ public class GameEngine {
     private Personagem inimigoAtual;
     private CombatService combatService;
     private Random random;
+    private double hpInicial = inimigoAtual.getHp();
 
     private int dificuldade;
     private Personagem[] inimigosCampanha = {
@@ -66,7 +67,7 @@ public class GameEngine {
     }
     public int turnoInimigo(){
         double chance = Math.random();
-        if(inimigoAtual.getHp() < 15 && inimigoAtual.getStims() > 0 && chance < 0.3){
+        if(inimigoAtual.getHp() <= 0.30 * hpInicial && inimigoAtual.getStims() > 0 && chance < 0.3){
             return combatService.usarStim(inimigoAtual, 15);
         } else if(inimigoAtual.getEp() > 5 && chance < 0.7){
             return combatService.atacarCibernetico(inimigoAtual, jogador);

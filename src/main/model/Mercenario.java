@@ -2,6 +2,6 @@ package main.model;
 
 public class Mercenario extends Personagem{
     public Mercenario(String nome){
-        super(nome, 100, 40, 10, 8, 6, 5, 2, 8);
+        super(nome, 55, 15, 7, 2, 4, 2, 1, 5);
     }
 }

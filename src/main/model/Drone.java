@@ -2,6 +2,6 @@ package main.model;
 
 public class Drone extends Personagem {
     public Drone(String nome){
-        super(nome, 120, 20, 12, 4, 10, 3, 1, 6);
+        super(nome, 40, 10, 5, 3, 3, 2, 1, 4);
     }
 }

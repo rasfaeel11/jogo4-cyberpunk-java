@@ -23,12 +23,13 @@ public abstract class Personagem {
         this.danoBase = danoBase;
     }
     public void receberDanoFisico(int dano){
-        int danoFinal = dano - defesaFisica;
-        if(hp < 0) hp = 0;
+        if (hp <= 0) return;
+        int danoFinal = Math.max(1, dano);
         hp -= danoFinal;
+        if(hp < 0) hp = 0;
     }
     public void receberDanoCibernetico(int dano){
-        int danoFinal = dano - defesaCibernetica;
+        int danoFinal = dano;
         if(hp < 0) hp = 0;
         hp -= danoFinal;
     }

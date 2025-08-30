@@ -6,7 +6,7 @@ import main.model.Personagem;
 public class CombatService {
     Random random = new Random();
 
-    private static final int EP_GASTO = 10;
+    private static final int EP_GASTO = 8;
     private static final int VALOR_CURA_STIM = 20;
 
 
@@ -26,6 +26,7 @@ public class CombatService {
         if(d20 == 1) return 0;
         int danoMagico = (Atacante.getDanoBase() + Atacante.getInteligencia() + d20 - Alvo.getDefesaCibernetica());
         if(danoMagico < 0) danoMagico = 0;
+        if(d20 == 20) danoMagico *= 2;
         Alvo.receberDanoCibernetico(danoMagico);
         return danoMagico;
     }
