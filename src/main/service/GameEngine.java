@@ -32,19 +32,21 @@ public class GameEngine {
         for(Personagem inimigo : inimigosCampanha){
             switch (dificuldade) {
                 case 1:
-                    inimigo.setHp((int)(inimigo.getHp() * 0.8));
-                    inimigo.setDanoBase((int)(inimigo.getDanoBase() * 0.8));
+                    inimigo.setHp((int)(inimigo.getHp() * 0.9));
+                    inimigo.setDanoBase((int)(inimigo.getDanoBase() * 0.9));
 
                     break;
                 case 2:
+                    inimigo.setHp((int)(inimigo.getHp() * 1));
+                    inimigo.setDanoBase((int)inimigo.getDanoBase() * 1);
                     break;
                 case 3:
-                    inimigo.setHp((int)(inimigo.getHp() * 1.2));
-                    inimigo.setDanoBase((int)(inimigo.getDanoBase() * 1.2));
+                    inimigo.setHp((int)(inimigo.getHp() * 1.1));
+                    inimigo.setDanoBase((int)(inimigo.getDanoBase() * 1.1));
                     break;
                 case 4:
-                    inimigo.setHp((int)(inimigo.getHp() * 1.5));
-                    inimigo.setDanoBase((int)(inimigo.getDanoBase() * 1.5));
+                    inimigo.setHp((int)(inimigo.getHp() * 1.15));
+                    inimigo.setDanoBase((int)(inimigo.getDanoBase() * 1.15));
                     break;
                 default:
                     break;
@@ -68,7 +70,7 @@ public class GameEngine {
     public int turnoInimigo(){
         double chance = Math.random();
         if(inimigoAtual.getHp() <= 0.30 * hpInicial && inimigoAtual.getStims() > 0 && chance < 0.3){
-            return combatService.usarStim(inimigoAtual, 15);
+            return combatService.usarStim(inimigoAtual, 10);
         } else if(inimigoAtual.getEp() > 5 && chance < 0.7){
             return combatService.atacarCibernetico(inimigoAtual, jogador);
         } else {
