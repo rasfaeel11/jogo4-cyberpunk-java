@@ -1,55 +1,55 @@
 🌆 Cyberpunk RPG - Java
-Um RPG cyberpunk baseado em turnos, desenvolvido em Java, com combate estratégico, gestão de recursos e campanha desafiadora.
-O projeto mantém backend puro (lógica do jogo) e frontend separado (ConsoleUI) para melhor organização.
+Um RPG cyberpunk baseado em turnos, desenvolvido em Java, com combate estratégico, gestão de recursos e campanha desafiadora. <br>
+O projeto mantém backend puro (lógica do jogo) e frontend separado (ConsoleUI) para melhor organização. <br>
 
-🎮 Funcionalidades
-Escolha de classe do jogador:
-🥷 CyberPunk
-🕶️ NetRunner
-⚔️ StreetSamurai
-🛠️ Techie
+🎮 Funcionalidades <br>
+Escolha de classe do jogador: <br>
+🥷 CyberPunk <br>
+🕶️ NetRunner <br>
+⚔️ StreetSamurai <br>
+🛠️ Techie <br>
 
-Sistema de combate por turnos:
-👊 Ataque físico
-💻 Ataque cibernético (gasta EP)
-💉 Uso de Stims para cura
+Sistema de combate por turnos: <br>
+👊 Ataque físico <br>
+💻 Ataque cibernético (gasta EP) <br>
+💉 Uso de Stims para cura <br>
 
-Dificuldade ajustável:
-1️⃣ Fácil
-2️⃣ Normal
-3️⃣ Difícil
-4️⃣ Insano
+Dificuldade ajustável: <br>
+1️⃣ Fácil <br>
+2️⃣ Normal <br>
+3️⃣ Difícil <br>
+4️⃣ Insano <br>
 
-Campanha com múltiplos inimigos:
-🤖 Drone
-🧑‍💻 Hacker
-🪖 Mercenário
+Campanha com múltiplos inimigos: <br>
+🤖 Drone <br>
+🧑‍💻 Hacker <br>
+🪖 Mercenário <br>
 
 
-📂 Estrutura do Projeto
-/src
- └─ main
-     ├─ Main.java                # Ponto de entrada do jogo
-     ├─ view
-     │   └─ ConsoleUI.java       # Interface em console
-     ├─ service
-     │   ├─ GameEngine.java      # Lógica do jogo e campanha
-     │   └─ CombatService.java  # Lógica de combate
-     └─ model
-         ├─ Personagem.java      # Classe abstrata base
-         ├─ CyberPunk.java
-         ├─ NetRunner.java
-         ├─ StreetSamurai.java
-         ├─ Techie.java
-         ├─ Drone.java
-         ├─ Hacker.java
-         └─ Mercenario.java
-🛠️ Backend
+📂 Estrutura do Projeto <br>
+/src <br>
+ └─ main <br>
+     ├─ Main.java                # Ponto de entrada do jogo <br>
+     ├─ view <br>
+     │   └─ ConsoleUI.java       # Interface em console <br>
+     ├─ service <br>
+     │   ├─ GameEngine.java      # Lógica do jogo e campanha <br>
+     │   └─ CombatService.java  # Lógica de combate <br>
+     └─ model <br>
+         ├─ Personagem.java      # Classe abstrata base <br>
+         ├─ CyberPunk.java <br>
+         ├─ NetRunner.java <br>
+         ├─ StreetSamurai.java <br>
+         ├─ Techie.java <br>
+         ├─ Drone.java <br>
+         ├─ Hacker.java <br>
+         └─ Mercenario.java <br>
+🛠️ Backend <br>
 
-CombatService: responsável por ataques físicos, cibernéticos e cura via Stims
+CombatService: responsável por ataques físicos, cibernéticos e cura via Stims <br>
 
-GameEngine: controla turnos, inimigos e dificuldade
+GameEngine: controla turnos, inimigos e dificuldade <br>
 
-Personagem: classe abstrata base para todas as classes de jogador e inimigos
+Personagem: classe abstrata base para todas as classes de jogador e inimigos <br>
 
-O frontend apenas solicita entradas do jogador e mostra o resultado do turno. A lógica do jogo está completamente encapsulada no backend.
+O frontend apenas solicita entradas do jogador e mostra o resultado do turno. A lógica do jogo está completamente encapsulada no backend. <br>
